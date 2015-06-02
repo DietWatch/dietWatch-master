@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="aib.dietwatch.SignupActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layoutLogin"
+            >
+
+
+            <TextView android:text="Załóż konto" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/zalozTeskt"
+                android:textSize="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zarejestruj się przez Facebook"
+                android:id="@+id/facebookSignup"
+                android:layout_below="@+id/zalozTeskt"
+                android:layout_marginTop="25dp"
+                android:background="#44619d"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="lub załóż konto"
+                android:id="@+id/lub"
+                android:layout_below="@+id/facebookSignup"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Email"
+                android:ems="10"
+                android:id="@+id/email"
+                android:layout_below="@+id/lub"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:hint="Password"
+                android:id="@+id/new_password"
+                android:layout_below="@+id/email" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/zaloz"
+                android:layout_below="@+id/new_password"
+                android:text="Załóż konto"
+                />
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

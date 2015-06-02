@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nazwa Produktu"
+
+        />
+    <LinearLayout
+        android:layout_below="@+id/productName"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/productKcal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kcal"
+
+
+            />
+        <TextView
+            android:id="@+id/productCarbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carbs"
+            android:layout_marginLeft="30dp"
+            />
+        <TextView
+            android:id="@+id/productProteins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proteins"
+            android:layout_marginLeft="30dp"
+            />
+        <TextView
+            android:id="@+id/productFat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fat"
+            android:layout_marginLeft="30dp"
+            />
+
+        </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,203 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            >
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/wybor1"
+                >
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mężczyzna"
+                android:id="@+id/mezczyzna"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kobieta"
+                android:id="@+id/kobieta"
+                android:checked="false" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Określ swój cel:"
+                android:layout_below="@id/wybor1"
+                android:id="@+id/okresl"
+                />
+
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cel"
+                android:layout_below="@id/okresl"
+                >
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Odchudzanie"
+                    android:id="@+id/odchudzanie"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Masa"
+                    android:id="@+id/masa"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nic specjalnego"
+                    android:id="@+id/nic"
+                    android:checked="false" />
+
+            </RadioGroup>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Waga: (kg)"
+                android:id="@+id/wiekText"
+                android:layout_below="@+id/cel"
+ />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/waga"
+                android:layout_below="@+id/wiekText"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Wzrost: (cm)"
+                android:id="@+id/textView"
+                android:layout_below="@+id/waga"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/wzrost"
+                android:layout_below="@+id/textView"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Wiek:"
+                android:id="@+id/textView2"
+                android:layout_below="@+id/wzrost"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/wiek"
+                android:layout_below="@+id/textView2"
+                />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/grupa"
+                android:layout_below="@id/wiek"
+            >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nisko aktywny (brak ćwiczeń)"
+                android:id="@+id/nisko"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Srednio aktywny (Cwiczenia 3 razy w tygodniu)"
+                android:id="@+id/srednio"
+                android:layout_below="@+id/nisko"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aktywny (codzienne intensywne ćwiczenia)"
+                android:id="@+id/aktywny"
+                android:checked="false"
+                android:layout_below="@+id/srednio"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bardzo aktywny (codzienne intensywne ćwiczenia - sportowiec)"
+                android:id="@+id/bardzo"
+                android:layout_below="@+id/aktywny"
+                android:checked="false" />
+            </RadioGroup>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sprawdz"
+                android:id="@+id/button"
+                android:layout_below="@+id/grupa"
+                android:onClick="onButtonClick" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/wynik"
+                android:layout_below="@+id/button"
+                android:layout_marginBottom="35dp"
+            />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
