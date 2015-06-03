@@ -2,6 +2,7 @@ package aib.dietwatch.itemView;
 
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ import aib.dietwatch.data.Product;
  */
 @EViewGroup(R.layout.list_item)
 public class ProductItemView extends RelativeLayout{
+    private static final String TAG = ProductItemView.class.getSimpleName();
     @ViewById
     TextView productName;
 
@@ -38,10 +40,10 @@ public class ProductItemView extends RelativeLayout{
 
     public void bind(Product product){
         productName.setText(product.name);
-        productKcal.setText((Integer.toString(product.kcal)));
-        productCarbs.setText((Integer.toString(product.Carbs)));
-        productProteins.setText((Integer.toString(product.Proteins)));
-        productFat.setText((Integer.toString(product.Fat)));
+        productKcal.setText(product.kcal);
+        productCarbs.setText(product.carbs);
+        productProteins.setText(product.proteins);
+        productFat.setText(product.fat);
 
 
     }

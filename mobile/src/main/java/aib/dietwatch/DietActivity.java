@@ -50,13 +50,11 @@ public class DietActivity extends ActionBarActivity {
         ringProgressDialog = new ProgressDialog(this);
         ringProgressDialog.setMessage("Loading...");
         ringProgressDialog.setIndeterminate(true);
+        restProductBackgroundTask.getProductList();
+
 
     }
-    @Click
-    void imageButton1Clicked() {
-        restProductBackgroundTask.getProductList();
-       
-    }
+
 
 
     public void updateProductList(ProductList productList) {
@@ -68,31 +66,6 @@ public class DietActivity extends ActionBarActivity {
     @ItemClick
     void listItemClicked(Product item) {
         Toast.makeText(this, item.name, Toast.LENGTH_SHORT).show();
-    }
-
-
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_diet, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
 

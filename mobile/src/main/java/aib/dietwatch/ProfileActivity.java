@@ -50,9 +50,9 @@ public class ProfileActivity extends ActionBarActivity {
     void init() {
         //Toast.makeText(this, "Your email " + emailAndPassword.email.toString(), Toast.LENGTH_LONG).show();
 
-        userEmail.setText(information.EmailFK.toString());
-
-        poleBMI.setText(information.BMI.toString());
+//        userEmail.setText(information.EmailFK.toString());
+//
+//        poleBMI.setText(information.BMI.toString());
 
 
     }

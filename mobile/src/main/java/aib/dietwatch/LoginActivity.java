@@ -88,7 +88,7 @@ public class LoginActivity extends ActionBarActivity {
         EmailAndPassword emailAndPassword = new EmailAndPassword();
         emailAndPassword.email = email.getText().toString();
         emailAndPassword.password = password.getText().toString();
-        ProfileActivity_.intent(this).information(information).start();
+        ProfileActivity_.intent(this).emailAndPassword(emailAndPassword).start();
 
         finish();
     }

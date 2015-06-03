@@ -39,7 +39,7 @@ public interface DietWatchRestClient extends RestClientHeaders {
     @Post("/db/informations")
     Information addInformation(Information information);
 
-    @Get("/db/products")
+    @Get("/db/productss")
     ProductList getProducts();
 
 }
