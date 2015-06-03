@@ -40,6 +40,7 @@ public class RestProductBackgroundTask {
     void getProductList() {
         try {
             dietWatchRestClient.setHeader("X-Dreamfactory-Application-Name", "dietwatch");
+
             ProductList productList = dietWatchRestClient.getProducts();
             publishResult(productList);
         } catch (Exception e) {

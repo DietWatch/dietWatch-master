@@ -11,6 +11,7 @@ import java.io.Serializable;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Product implements Serializable {
 
+    public int id;
     public String name;
     public	String	carbs;
     public	String	fat;
