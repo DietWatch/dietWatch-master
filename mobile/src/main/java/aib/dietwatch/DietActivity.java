@@ -1,6 +1,8 @@
 package aib.dietwatch;
 
+import android.app.FragmentManager;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +17,7 @@ import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.Extra;
+import org.androidannotations.annotations.FragmentById;
 import org.androidannotations.annotations.ItemClick;
 import org.androidannotations.annotations.NonConfigurationInstance;
 import org.androidannotations.annotations.ViewById;
@@ -24,6 +27,8 @@ import aib.dietwatch.adapter.ProductListAdapter;
 import aib.dietwatch.data.Product;
 import aib.dietwatch.data.ProductList;
 import aib.dietwatch.data.User;
+import aib.dietwatch.fragments.ProductItemFragmet;
+
 
 @EActivity(R.layout.activity_diet)
 public class DietActivity extends ActionBarActivity {
@@ -65,7 +70,10 @@ public class DietActivity extends ActionBarActivity {
 
     @ItemClick
     void listItemClicked(Product item) {
-        Toast.makeText(this, item.name, Toast.LENGTH_SHORT).show();
+        FragmentManager manager = getFragmentManager();
+        ProductItemFragmet productItemFragmet = new ProductItemFragmet();
+
+        productItemFragmet.show(manager,"asdadsdsa");
     }
 
 
