@@ -15,7 +15,7 @@ import java.util.List;
 import aib.dietwatch.data.Product;
 import aib.dietwatch.data.ProductList;
 import aib.dietwatch.itemView.ProductItemView;
-
+import aib.dietwatch.itemView.ProductItemView_;
 
 
 /**
@@ -52,7 +52,7 @@ public class ProductListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ProductItemView productItemView;
         if (convertView == null) {
-            productItemView =  new ProductItemView(context);
+            productItemView = ProductItemView_.build(context);
         } else {
             productItemView = (ProductItemView) convertView;
         }
@@ -65,5 +65,6 @@ public class ProductListAdapter extends BaseAdapter {
     public void update(ProductList productList) {
         products.clear();
         products.addAll(productList.records);
+        notifyDataSetChanged();
     }
 }

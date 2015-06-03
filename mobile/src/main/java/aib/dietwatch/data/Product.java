@@ -12,6 +12,7 @@ import java.io.Serializable;
 public class Product implements Serializable {
 
     public int id;
+    @JsonProperty("name")
     public String name;
     public	String	carbs;
     public	String	fat;

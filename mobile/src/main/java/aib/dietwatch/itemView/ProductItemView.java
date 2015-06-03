@@ -17,7 +17,7 @@ import aib.dietwatch.data.Product;
  */
 @EViewGroup(R.layout.list_item)
 public class ProductItemView extends RelativeLayout{
-    private static final String TAG = ProductItemView.class.getSimpleName();
+
     @ViewById
     TextView productName;
 
