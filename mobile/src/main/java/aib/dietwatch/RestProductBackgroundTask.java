@@ -10,14 +10,16 @@ import org.androidannotations.annotations.RootContext;
 import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.rest.RestService;
 
+import aib.dietwatch.data.Product;
 import aib.dietwatch.data.ProductList;
+import aib.dietwatch.data.User;
 
 /**
  * Created by student7 on 2015-06-01.
  */
 @EBean
 public class RestProductBackgroundTask {
-    private static final String TAG =RestProductBackgroundTask.class.getSimpleName() ;
+
     @RootContext
     DietActivity activity;
     @RestService
@@ -47,9 +49,6 @@ public class RestProductBackgroundTask {
             publishError(e);
         }
     }
-
-
-
     @UiThread
     void publishResult(ProductList productList) {
         activity.updateProductList(productList);
@@ -59,4 +58,8 @@ public class RestProductBackgroundTask {
     void publishError(Exception e) {
         activity.showError(e);
     }
+
+
+
+
 }

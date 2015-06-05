@@ -11,6 +11,7 @@ import java.io.Serializable;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class User implements Serializable {
 
+    public Integer ownerId;
     @JsonProperty("session_id")
     public String sessionId;
 
@@ -29,6 +30,8 @@ public class User implements Serializable {
     public String bmi;
 
     public String email;
+
+
 
 }
 

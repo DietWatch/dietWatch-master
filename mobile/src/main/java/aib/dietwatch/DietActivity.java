@@ -48,6 +48,13 @@ public class DietActivity extends ActionBarActivity {
 
     ProgressDialog ringProgressDialog;
 
+    @Click(R.id.addBtn)
+    void addBtnClicked(){
+        NewProductActivity_.intent(this).start();
+
+    }
+
+
     @AfterViews
     void init(){
 

@@ -39,7 +39,12 @@ public interface DietWatchRestClient extends RestClientHeaders {
     @Post("/db/informations")
     Information addInformation(Information information);
 
+    @RequiresHeader({"X-Dreamfactory-Application-Name"})
     @Get("/db/productss")
     ProductList getProducts();
+
+    @RequiresHeader({"X-Dreamfactory-Application-Name","X-Dreamfactory-Session-Token"})
+    @Post("/db/productss")
+     void addProduct(Product product);
 
 }

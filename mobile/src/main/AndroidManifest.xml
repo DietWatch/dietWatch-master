@@ -42,6 +42,11 @@
             android:name=".ProfileActivity_"
             android:label="@string/title_activity_profile" >
         </activity>
+        <activity
+            android:name=".NewProductActivity_"
+            android:label="@string/title_activity_profile" >
+        </activity>
+
 
     </application>
 

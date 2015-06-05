@@ -9,23 +9,27 @@ import java.io.Serializable;
  * Created by Mateusz on 2015-05-28.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Product implements Serializable {
+public class Product implements Serializable, Comparable<Product>{
 
     public int id;
-    @JsonProperty("name")
+
     public String name;
     public	String	carbs;
     public	String	fat;
     public	String	kcal;
     public	String	proteins;
+    public Integer ownerId;
 
+    @Override
+    public int compareTo(Product product) {
 
-//    public Product(String name, int Carbs,int Fat, int Kcal, int Proteins, double WeightP) {
-//        this.Carbs=Carbs;
-//        this.name=name;
-//        this.Fat=Fat;
-//        this.kcal=Kcal;
-//        this.Proteins=Proteins;
-//        this.WeightP=WeightP;
-//    }
-}
+        if (id > product.id) {
+            return -1;
+        } else if (id == product.id) {
+            return 0;
+
+        } else {
+            return 1;
+        }
+
+    }}
