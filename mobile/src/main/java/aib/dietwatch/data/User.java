@@ -31,6 +31,8 @@ public class User implements Serializable {
 
     public String email;
 
+    public boolean isLogout;
+
 
 
 }

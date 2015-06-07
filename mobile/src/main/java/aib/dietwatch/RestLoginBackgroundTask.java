@@ -41,4 +41,27 @@ public class RestLoginBackgroundTask {
     void publishError(Exception e) {
         activity.showError(e);
     }
+
+    @Background
+    public void logout (String sessionId){
+        try {
+            dietWatchRestClient.setHeader("X-Dreamfactory-Application-Name", "dietwatch");
+            dietWatchRestClient.setHeader("X-Dreamfactory-Session-Token", sessionId);
+            User user = dietWatchRestClient.logout();
+            publishLogoutResult(user.isLogout);
+        } catch (Exception e) {
+            publishLogoutError(e);
+        }
+    }
+
+    @UiThread
+    void publishLogoutResult (Boolean success){
+        activity.onLogout(success);
+    }
+
+
+    @UiThread
+    void publishLogoutError(Exception e) {
+        activity.showErrorUpdate(e);
+    }
 }

@@ -5,6 +5,7 @@ package aib.dietwatch;
  */
 
 
+import org.androidannotations.annotations.rest.Delete;
 import org.androidannotations.annotations.rest.Get;
 import org.androidannotations.annotations.rest.Post;
 import org.androidannotations.annotations.rest.RequiresHeader;
@@ -46,5 +47,8 @@ public interface DietWatchRestClient extends RestClientHeaders {
     @RequiresHeader({"X-Dreamfactory-Application-Name","X-Dreamfactory-Session-Token"})
     @Post("/db/productss")
      void addProduct(Product product);
+
+    @Delete("/user/session")
+    User logout();
 
 }

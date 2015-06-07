@@ -101,4 +101,22 @@ public class LoginActivity extends ActionBarActivity {
         Toast.makeText(this, "Login failed", Toast.LENGTH_LONG).show();
     }
 
+    public void onLogout(Boolean success) {
+        if(success) {
+            preference.id().put(0);
+            preference.sessionId().put("");
+            preference.email().put("");
+            preference.password().put("");
+           
+            Toast.makeText(this, "Wylogowano!", Toast.LENGTH_LONG).show();
+            LoginActivity_.intent(this).start();
+            finish();
+        }
+    }
+
+    public void showErrorUpdate(Exception e) {
+        Toast.makeText(getApplicationContext(), "Błąd", Toast.LENGTH_SHORT).show();
+        e.printStackTrace(); //debug
+    }
 }
+

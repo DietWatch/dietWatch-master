@@ -20,6 +20,8 @@ import org.androidannotations.annotations.Extra;
 import org.androidannotations.annotations.FragmentById;
 import org.androidannotations.annotations.ItemClick;
 import org.androidannotations.annotations.NonConfigurationInstance;
+import org.androidannotations.annotations.OptionsItem;
+import org.androidannotations.annotations.OptionsMenu;
 import org.androidannotations.annotations.ViewById;
 
 
@@ -29,7 +31,7 @@ import aib.dietwatch.data.ProductList;
 import aib.dietwatch.data.User;
 import aib.dietwatch.fragments.ProductItemFragmet;
 
-
+@OptionsMenu(R.menu.menu_diet)
 @EActivity(R.layout.activity_diet)
 public class DietActivity extends ActionBarActivity {
 
@@ -43,8 +45,19 @@ public class DietActivity extends ActionBarActivity {
     @Bean
     @NonConfigurationInstance
     RestProductBackgroundTask restProductBackgroundTask;
+
+    @Bean
+    RestLoginBackgroundTask restLoginBackgroundTask;
     @ViewById
     ListView list;
+
+    @Click(R.id.action_logout)
+    void actionLogout() {
+        restLoginBackgroundTask.logout(user.sessionId);
+    }
+
+
+
 
     ProgressDialog ringProgressDialog;
 
