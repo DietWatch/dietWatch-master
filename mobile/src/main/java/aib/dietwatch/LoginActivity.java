@@ -80,35 +80,18 @@ public class LoginActivity extends ActionBarActivity {
             restLoginBackgroundTask.login(emailAndPassword);
         }
 
-
-
-
-
     }
 
-
-
-
     public void loginSuccess(User user, String password) {
-
         preference.email().put(user.email);
-
         preference.sessionId().put(user.sessionId);
         preference.password().put(password);
         preference.bmi().put(user.bmi);
         preference.weight().put(user.weight);
         preference.height().put(user.height);
         preference.age().put(user.age);
-
-
-
-
-
-
         ringProgressDialog.dismiss();
         Toast.makeText(this, "You have logged successful", Toast.LENGTH_LONG).show();
-
-
         ProfileActivity_.intent(this).start();
         finish();
     }
