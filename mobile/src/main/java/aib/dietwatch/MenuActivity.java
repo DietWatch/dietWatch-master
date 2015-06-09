@@ -15,7 +15,7 @@ public class MenuActivity extends ActionBarActivity {
 
 
     @Click
-    void loginClicked() { LoginActivity_.intent(this).start();}
+    void zalozClicked() { LoginActivity_.intent(this).start();}
 
 
     @Click

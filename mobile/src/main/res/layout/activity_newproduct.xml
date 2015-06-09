@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg2"
+    >
+
+    <TextView
+        android:id="@+id/titleNewProduct"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Nowy produkt"
+        android:textSize="30dp"
+
+        />
+
+    <EditText
+        android:layout_marginTop="40dp"
+        android:id="@+id/newProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wprowadź nazwę produktu"
+        />
+    <EditText
+        android:id="@+id/newProductKcal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wprowadź ilość Kcal produktu"
+        android:layout_below="@+id/newProductName"
+        />
+    <EditText
+        android:id="@+id/newProductCarbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wprowadź ilość węglowodanów produktu"
+        android:layout_below="@+id/newProductKcal"
+        />
+     <EditText
+        android:id="@+id/newProductProteins"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wprowadź ilość białka produktu"
+        android:layout_below="@+id/newProductCarbs"
+        />
+    <EditText
+        android:id="@+id/newProductFat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wprowadź ilość tłuszczu produktu"
+        android:layout_below="@+id/newProductProteins"
+        />
+<Button
+    android:id="@+id/confirmNewProduct"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Potwierdź"
+    android:layout_marginTop="20dp"
+    android:layout_below="@id/newProductFat"
+
+    android:background="#08c5e7"
+    android:textColor="#fff"
+    android:textSize="30dp" />
+
+
+
+
+</RelativeLayout>

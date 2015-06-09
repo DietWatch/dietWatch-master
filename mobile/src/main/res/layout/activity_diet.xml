@@ -1,7 +1,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="aib.dietwatch.DietActivity_">
+    tools:context="aib.dietwatch.DietActivity_"
+    android:background="@drawable/bg2"
+    >
 
     <SearchView
         android:id="@+id/searchView1"
@@ -29,7 +31,11 @@
         android:layout_height="wrap_content"
         android:text="Dodaj nowy produkt"
         android:layout_below="@+id/list"
-
+        android:textSize="25dp"
+        android:textColor="#fff"
+        android:background="#08c5e7"
+        android:layout_marginLeft="30dp"
+       android:layout_marginTop="30dp"
         />
 
 
